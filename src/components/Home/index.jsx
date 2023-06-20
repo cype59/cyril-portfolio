@@ -26,7 +26,7 @@ const Home = () => {
     <>
       <TransitionEffect>
         <div className="container home-page">
-          {/* <CardHoverEffect> */}
+          <CardHoverEffect>
             <div className="image-zone">
               <img src={imgProfil} alt="profil"></img>
             </div>
@@ -61,7 +61,7 @@ const Home = () => {
                 CONTACT ME
               </Link>
             </div>
-          {/* </CardHoverEffect> */}
+          </CardHoverEffect>
         </div>
       </TransitionEffect>
     </>
