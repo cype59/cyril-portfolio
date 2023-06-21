@@ -5,8 +5,8 @@
 }
 
 .container-effect {
-    width: 100%;
-    height: 100%;
+    width: 103%;
+    height: 103%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -14,4 +14,17 @@
     justify-content: center;
     flex-wrap: wrap;
     transition: all 0.5s ease-out;
+
+    .shape-background {
+        position: absolute;
+        width: 80%;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .container-effect {
+        width: 100%;
+        height: 100%;
+    }
 }

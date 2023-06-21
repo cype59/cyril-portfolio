@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import LogoTitle from "../../assets/images/logo-c.png";
 import imgProfil from "../../assets/images/img-profil.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
 import TransitionEffect from "../TransitionEffect";
 import CardHoverEffect from "../CardHoverEffect";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -13,6 +16,10 @@ const Home = () => {
   const word2 = "je suis";
   const word3 = "yril";
   const word4 = "développeur web.";
+
+  const handleContact = () => {
+    console.log("success");
+  };
 
   useEffect(() => {
     const idTimeOut = setTimeout(() => {
@@ -56,10 +63,22 @@ const Home = () => {
                   index={word1.length + word2.length + word3.length}
                 />
               </h1>
-              <h2>Frontend Developer / Javascript Expert / Youtuber</h2>
-              <Link to="/contact" className="flat-button">
-                CONTACT ME
-              </Link>
+              <h2>Développement Frontend / UX & UI Design </h2>
+              <motion.button
+                className="contact-button"
+                onClick={handleContact}
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                {" "}
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ marginRight: "0.5rem" }}
+                />
+                Contact
+              </motion.button>
+              {/* <Link to="/contact" className="flat-button"> */}
+              {/* </Link> */}
             </div>
           </CardHoverEffect>
         </div>

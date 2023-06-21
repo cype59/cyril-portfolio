@@ -1,6 +1,7 @@
 .home-page {
   .text-zone {
-    margin-left: 10%;
+    margin-left: 7%;
+    z-index: 2;
   }
   h1 {
     color: #fff;
@@ -46,33 +47,38 @@
     color: #8d8d8d;
     margin-top: 20px;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: sans-serif;
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
   }
 
-  .flat-button {
-    color: #ffd700;
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 10px 18px;
+  .contact-button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
     border: 1px solid #ffd700;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #ffd700;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-family: "Bebas Neue", "Roboto", "Open Sans", sans-serif;
+    letter-spacing: 2px;
     margin-top: 25px;
-    float: left;
-    animation: fadeIn 1s 1.8s backwards;
-    white-space: nowrap;
-
+    margin-bottom: 2%;
     &:hover {
-      background: #ffd700;
-      color: #333;
+      color: #00352f;
+      background-color: #ffd700;
+      transition: all 0.4s;
     }
   }
 
   .image-zone {
+    z-index: 2;
     img {
       width: calc(220px + 0.390625vw);
     }    
