@@ -9,6 +9,8 @@ import CardHoverEffect from "../CardHoverEffect";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import shapePolygon from "../../assets/images/shape-polygon.png";
+
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -33,7 +35,7 @@ const Home = () => {
     <>
       <TransitionEffect>
         <div className="container home-page">
-          <CardHoverEffect>
+          <CardHoverEffect shape={shapePolygon}>
             <div className="image-zone">
               <img src={imgProfil} alt="profil"></img>
             </div>

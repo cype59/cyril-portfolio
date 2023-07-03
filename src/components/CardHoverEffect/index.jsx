@@ -1,6 +1,5 @@
 import React from "react";
 import "./index.scss";
-import shapeBg from "../../assets/images/shape1.png";
 
 const CardHoverEffect = (props) => {
   const hoverHandler = (e) => {
@@ -28,7 +27,7 @@ const CardHoverEffect = (props) => {
   return (
     <div className="hover-effect">
       <div className="container-effect" onMouseMove={hoverHandler}>
-        <img src={shapeBg} alt="shape-1" className="shape-background" />
+        <img src={props.shape} alt="shape-1" className="shape-background" />
         {props.children}
       </div>
     </div>
