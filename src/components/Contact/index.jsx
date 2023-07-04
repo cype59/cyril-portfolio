@@ -2,25 +2,17 @@ import AnimatedLetters from "../AnimatedLetters";
 import TransitionEffect from "../TransitionEffect";
 import { motion } from "framer-motion";
 import "./index.scss";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import CardHoverEffect from "../CardHoverEffect";
 import shapeCircle from "../../assets/images/shape-circle.png";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MotionEffect from "../MotionEffect";
 
 const Contact = () => {
-  const [letterClass, setLetterClass] = useState("text-animate");
   const refForm = useRef();
-
-  useEffect(() => {
-    const idTimeOut = setTimeout(() => {
-      setLetterClass("text-animate-bouncy");
-    }, 3000);
-
-    return () => clearTimeout(idTimeOut);
-  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -47,66 +39,79 @@ const Contact = () => {
         <div className="container contact-page">
           <CardHoverEffect shape={shapeCircle}>
             <div className="text-zone">
-              <h1>
-                <AnimatedLetters
-                  letterClass={letterClass}
-                  str="Contact"
-                  index={15}
-                />
-              </h1>
-              <p>
-                Si tu veux me contacter ou juste me dire bonjour c'est ici que
-                ça se passe ! Tu peux remplir simplement le formulaire
-                ci-dessous j'essayerai d'y répondre au plus vite 😉
-              </p>
+              <MotionEffect delay={1}>
+                <h1>
+                  <AnimatedLetters
+                    letterClass={"text-animate-bouncy"}
+                    str="Contact"
+                    index={15}
+                  />
+                </h1>
+              </MotionEffect>
+              <MotionEffect delay={1.2}>
+                <p>
+                  Si tu veux me contacter ou juste me dire bonjour c'est ici que
+                  ça se passe ! Tu peux remplir simplement le formulaire
+                  ci-dessous j'essayerai d'y répondre au plus vite 😉
+                </p>
+              </MotionEffect>
               <div className="contact-form">
                 <form ref={refForm} onSubmit={sendEmail}>
                   <ul>
-                    <li className="half">
-                      <input
-                        type="text"
-                        name="nom"
-                        placeholder="Nom"
-                        required
-                      />
-                    </li>
-                    <li className="half">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        required
-                      />
-                    </li>
-                    <li>
-                      <input
-                        type="text"
-                        name="objet"
-                        placeholder="Objet"
-                        required
-                      />
-                    </li>
-                    <li>
-                      <textarea
-                        name="message"
-                        placeholder="Message"
-                        required
-                      ></textarea>
-                    </li>
-                    <li>
-                      <motion.button
-                        type="submit"
-                        className="contact-button"
-                        value="Envoyer"
-                        whileTap={{ scale: 0.9 }}
-                        whileHover={{ scale: 1.1 }}
-                      >
-                        <FontAwesomeIcon
-                          icon={faPaperPlane}
-                          style={{ marginRight: "0.5rem" }}
-                        />Envoyer
-                      </motion.button>
-                    </li>
+                    <MotionEffect delay={1.4}>
+                      <li className="half">
+                        <input
+                          type="text"
+                          name="nom"
+                          placeholder="Nom"
+                          required
+                        />
+                      </li>
+                      <li className="half">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </li>
+                    </MotionEffect>
+                    <MotionEffect delay={1.6}>
+                      <li>
+                        <input
+                          type="text"
+                          name="objet"
+                          placeholder="Objet"
+                          required
+                        />
+                      </li>
+                    </MotionEffect>
+                    <MotionEffect delay={1.8}>
+                      <li>
+                        <textarea
+                          name="message"
+                          placeholder="Message"
+                          required
+                        ></textarea>
+                      </li>
+                    </MotionEffect>
+                    <MotionEffect delay={2}>
+                      <li>
+                        <motion.button
+                          type="submit"
+                          className="contact-button"
+                          value="Envoyer"
+                          whileTap={{ scale: 0.9 }}
+                          whileHover={{ scale: 1.1 }}
+                        >
+                          <FontAwesomeIcon
+                            icon={faPaperPlane}
+                            style={{ marginRight: "0.5rem" }}
+                          />
+                          Envoyer
+                        </motion.button>
+                      </li>
+                    </MotionEffect>
                   </ul>
                 </form>
               </div>
