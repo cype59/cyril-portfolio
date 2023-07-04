@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngular,
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faAngular,
+//   faCss3,
+//   faGitAlt,
+//   faHtml5,
+//   faJsSquare,
+//   faReact,
+// } from "@fortawesome/free-brands-svg-icons";
 import TransitionEffect from "../TransitionEffect";
 import CardHoverEffect from "../CardHoverEffect";
 import shapeTriangle from "../../assets/images/shape-triangle.png";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import lottieFile from "../../assets/lotties/surf.json"
+import { Player } from "@lottiefiles/react-lottie-player";
+import lottieFile from "../../assets/lotties/surf.json";
 
 const About = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
+
+  const refLottie = createRef();
 
   useEffect(() => {
     const idTimeOut = setTimeout(() => {
@@ -53,20 +55,18 @@ const About = () => {
                 inspirations différentes puisées aux 4 coins du monde.
               </p>
               <p>
-                Si je devais me définir, je dirai que je suis un passionné de
-                voyage (comme vous l'aurez peut-etre compris), de sport en tout
-                genre (escalade, foot, surf...), un Youtuber à mes heures
-                perdues et un développeur en devenir 😉
+                Si je devais me définir, je dirais que je suis un passionné de
+                voyage, de sport en tout genre (escalade, foot, surf...), un
+                Youtuber à mes heures perdues et un développeur en devenir 😉
               </p>
             </div>
             <div className="lottie-zone">
               <Player
+                ref={refLottie}
                 autoplay
                 loop
                 src={lottieFile}
-                style={{ width: "60%" }}
-              >
-              </Player>
+              ></Player>
             </div>
 
             {/* 

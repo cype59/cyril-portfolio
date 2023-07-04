@@ -12,15 +12,14 @@ const CardHoverEffect = (props) => {
         let y = e.clientY - hoverElementRect.y;
         let midCardWidth = hoverElementRect.width / 2;
         let midCardHeight = hoverElementRect.height / 2;
-  
+
         let angleY = (x - midCardWidth) / 100;
         let angleX = (y - midCardHeight) / 100;
-  
+
         hoverElement.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
       } else {
         hoverElement.children[0].style.transform = `rotateX(0deg) rotateY(0deg)`;
       }
-      
     }
   };
 

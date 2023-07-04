@@ -1,56 +1,151 @@
 .appLayout {
-    display: flex;
-    flex-wrap: nowrap;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .page {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
-    @media (max-width: 830px) {
-        overflow: visible;
-      }
+  @media (max-width: 830px) {
+    overflow: visible;
+  }
 }
 
 .top-tags {
-    bottom: auto;
-    top: 35px;
+  bottom: auto;
+  top: 35px;
 }
 
 .tags {
-    color: #ffd700;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 0;
-    left: 120px;
-    font-size: 18px;
-    font-family: 'La Belle Aurore';
+  color: #ffd700;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  font-size: 18px;
+  font-family: "La Belle Aurore";
+  z-index: -10;
 }
 
 .bottom-tag-html {
-    margin-left: -20px;
+  margin-left: -20px;
 }
 
 .container {
-    width: 100%;
-    opacity: 0;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  opacity: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 
-    z-index: 1;
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s;
-    height: 100%; 
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  height: 100%;
 }
 
-@media screen and (max-width: 830px){
-    .appLayout {
-        flex-direction: column;
+.about-page,
+.contact-page {
+  .text-zone {
+    z-index: 2;
+    width: 40%;
+    margin-left: 10%;
+
+    h1 {
+      color: #ffd700;
+      font-size: 2.5rem;
+      margin: 0;
+      font-family: "Arial Rounded MT Bold";
+      font-weight: 300;
+
+      &::before {
+        content: "<h1>";
+        font-family: "La Belle Aurore";
+        font-size: 18px;
+        position: absolute;
+        opacity: 0.6;
+        margin-top: -15px;
+        margin-left: -26px;
+      }
+
+      &::after {
+        content: "</h1>";
+        font-family: "La Belle Aurore";
+        font-size: 18px;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 20px;
+        animation: fadeIn 1s 1.7s backwards;
+        opacity: 0.6;
+      }
     }
+    p {
+      font-size: 1rem;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 300;
+      animation: pulse 1s;
+
+      &:nth-of-type(1) {
+        animation-delay: 1.1s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 1.2s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 1.3s;
+      }
+    }
+  }
+
+  .text-animate-bouncy {
+    &:hover {
+      color: #fff;
+      transition: 0.5s;
+    }
+  }
+}
+
+.contact-button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ffd700;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #ffd700;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", "Roboto", "Open Sans", sans-serif;
+  letter-spacing: 2px;
+  margin-top: 25px;
+  margin-bottom: 2%;
+  &:hover {
+    color: #00352f;
+    background-color: #ffd700;
+    transition: all 0.4s;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .appLayout {
+    flex-direction: column;
+  }
+
+  .about-page,
+  .contact-page {
+    .text-zone {
+      width: 80%;
+      margin-left: 0;
+      margin-top: 5%;
+    }
+  }
 }
