@@ -56,7 +56,7 @@
 
     h1 {
       color: #ffd700;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin: 0;
       font-family: "Arial Rounded MT Bold";
       font-weight: 300;
@@ -123,6 +123,20 @@
 @media screen and (max-width: 830px) {
   .appLayout {
     flex-direction: column;
+    height: auto;
+  }
+
+  .page {
+    height: auto;
+  }
+
+  .container {
+    padding-bottom: 58px;
+    height: auto;
+  }
+
+  .tags {
+    left: 30px;
   }
 
   .about-page,

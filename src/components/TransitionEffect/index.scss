@@ -26,3 +26,15 @@
     position:relative;
     height: 100%;
 }
+
+@media screen and (max-width: 830px) {
+    .transitionPage {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .transitionEffect {
+        height: auto;
+        min-height: 100vh;
+    }
+}
