@@ -9,9 +9,28 @@ import imgCv from "../../assets/images/cv-pierron-cyril.png";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import cyrilPdf from "../../assets/images/cv-pierron-cyril.pdf";
 
 
 const Skills = () => {
+  const onDownloadPdf = () => {
+    // using Java Script method to get PDF file
+    fetch(cyrilPdf).then(response => {
+        response.blob().then(blob => {
+            // Creating new object of PDF file
+            const fileURL = window.URL.createObjectURL(blob);
+            // Setting various property values
+            let alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = cyrilPdf;
+            alink.setAttribute(
+              'download',
+              `cv-cyril-pierron.pdf`,
+            );
+            alink.click();
+        })
+    })
+}
   return (
     <>
       <TransitionEffect>
@@ -33,6 +52,7 @@ const Skills = () => {
                   className="main-button"
                   whileTap={{ scale: 0.9 }}
                   whileHover={{ scale: 1.1 }}
+                  onClick={onDownloadPdf}
                 >
                   <FontAwesomeIcon
                     icon={faDownload}
