@@ -70,12 +70,18 @@
 
     a.about-link {
       &:after {
-        content: "À PROPOS";
+        content: "PROFIL";
       }
     }
     a.contact-link {
       &:after {
         content: "CONTACT";
+      }
+    }
+
+    a.skills-link {
+      &:after {
+        content: "SKILLS";
       }
     }
 

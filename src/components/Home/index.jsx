@@ -68,7 +68,7 @@ const Home = () => {
                 to="/contact"
               >
                 <motion.button
-                  className="contact-button"
+                  className="main-button"
                   whileTap={{ scale: 0.9 }}
                   whileHover={{ scale: 1.1 }}
                 >
@@ -79,9 +79,6 @@ const Home = () => {
                   Contact
                 </motion.button>
               </NavLink>
-
-              {/* <Link to="/contact" className="flat-button"> */}
-              {/* </Link> */}
             </div>
           </CardHoverEffect>
         </div>

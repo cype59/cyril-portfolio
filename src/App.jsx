@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import { AnimatePresence } from "framer-motion";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 function App() {
   const location = useLocation();
@@ -14,8 +15,9 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="a-propos" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="competences" element={<Skills />} />
         </Route>
       </Routes>
     </AnimatePresence>

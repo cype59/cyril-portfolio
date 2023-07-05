@@ -99,7 +99,7 @@ const Contact = () => {
                       <li>
                         <motion.button
                           type="submit"
-                          className="contact-button"
+                          className="main-button"
                           value="Envoyer"
                           whileTap={{ scale: 0.9 }}
                           whileHover={{ scale: 1.1 }}
