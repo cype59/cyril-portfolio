@@ -7,6 +7,7 @@ import About from "./components/About";
 import { AnimatePresence } from "framer-motion";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
           <Route path="a-propos" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="competences" element={<Skills />} />
+          <Route path="portfolio" element={<Portfolio />} />
         </Route>
       </Routes>
     </AnimatePresence>

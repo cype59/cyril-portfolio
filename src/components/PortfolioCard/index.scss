@@ -1,0 +1,50 @@
+.portfolio-card {
+  padding: 20px 50px;
+  color: #fff;
+  background-color: rgba(0, 114, 101, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  justify-content: center;
+  text-align: center;
+
+  hr {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  img {
+    width: calc(350px + 0.390625vw);
+    height: auto;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-family: "Arial Rounded MT Bold";
+    font-weight: 300;
+    margin: 0;
+    margin-top: 5%;
+  }
+
+  h2 {
+    color: #8d8d8d;
+    font-weight: 400;
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 830px) {
+    .portfolio-card {
+        padding: 10px;
+        img {
+            width: calc(300px + 0.390625vw);
+
+        }
+    }
+  }

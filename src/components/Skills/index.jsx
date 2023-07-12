@@ -72,7 +72,7 @@ const Skills = () => {
               </MotionEffect>
               <ul className="logo-list">
                 <LogoList logo={logoNode} name="Nodejs" delay={2.2} />
-                <LogoList logo={logoExpress} name="Expressjs" delay={2.3} />
+                <LogoList logo={logoExpress} name="Express" delay={2.3} />
                 <LogoList logo={logoStrapi} name="Strapi" delay={2.4} />
                 <LogoList logo={logoSql} name="SQL" delay={2.5} />
               </ul>

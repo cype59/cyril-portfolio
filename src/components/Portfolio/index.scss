@@ -1,0 +1,48 @@
+.portfolio-page {
+  .text-zone {
+    width: auto;
+    margin-left: 0;
+  }
+  .container-effect {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 8%;
+  }
+
+  .portfolio-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-top: 5%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 10%;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffd700;
+      border-right: none;
+      border-left: none;
+      border-radius: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .portfolio-page {
+    .portfolio-grid {
+      gap: 15px;
+      width: 90%;
+    }
+  }
+}
