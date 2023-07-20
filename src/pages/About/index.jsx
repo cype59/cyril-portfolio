@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 import "./index.scss";
-import AnimatedLetters from "../AnimatedLetters";
+import AnimatedLetters from "../../components/AnimatedLetters";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
 //   faAngular,
@@ -10,12 +10,12 @@ import AnimatedLetters from "../AnimatedLetters";
 //   faJsSquare,
 //   faReact,
 // } from "@fortawesome/free-brands-svg-icons";
-import TransitionEffect from "../TransitionEffect";
-import CardHoverEffect from "../CardHoverEffect";
+import TransitionEffect from "../../components/TransitionEffect";
+import CardHoverEffect from "../../components/CardHoverEffect";
 import shapeTriangle from "../../assets/images/shape-triangle.png";
 import { Player } from "@lottiefiles/react-lottie-player";
 import lottieFile from "../../assets/lotties/surf.json";
-import MotionEffect from "../MotionEffect";
+import MotionEffect from "../../components/MotionEffect";
 
 const About = () => {
   const refLottie = createRef();

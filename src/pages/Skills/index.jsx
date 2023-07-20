@@ -1,16 +1,16 @@
 import React from "react";
 import "./index.scss";
-import TransitionEffect from "../TransitionEffect";
-import CardHoverEffect from "../CardHoverEffect";
+import TransitionEffect from "../../components/TransitionEffect";
+import CardHoverEffect from "../../components/CardHoverEffect";
 import shapeTriangle from "../../assets/images/shape-triangle.png";
-import MotionEffect from "../MotionEffect";
-import AnimatedWords from "../AnimatedWords";
+import MotionEffect from "../../components/MotionEffect";
+import AnimatedWords from "../../components/AnimatedWords";
 import imgCv from "../../assets/images/cv-pierron-cyril.png";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import cyrilPdf from "../../assets/images/cv-pierron-cyril.pdf";
-import LogoList from "../LogoList";
+import LogoList from "../../components/LogoList";
 import logoReact from "../../assets/images/react.png";
 import logoRedux from "../../assets/images/redux.png";
 import logoHtml from "../../assets/images/html.png";
@@ -55,9 +55,17 @@ const Skills = () => {
                   />
                 </h1>
               </MotionEffect>
-              <MotionEffect delay={1.2}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  ease: "easeOut",
+                  delay: 1.2,
+                  duration: 0.75,
+                }}
+              >
                 <h2>Frontend : </h2>
-              </MotionEffect>
+              </motion.div>
               <ul className="logo-list">
                 <LogoList logo={logoHtml} name="Html" delay={1.4} />
                 <LogoList logo={logoCss} name="Css" delay={1.5} />
@@ -67,18 +75,34 @@ const Skills = () => {
                 <LogoList logo={logoJs} name="Javascript" delay={1.9} />
                 <LogoList logo={logoTs} name="Typescript" delay={2} />
               </ul>
-              <MotionEffect delay={2.1}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  ease: "easeOut",
+                  delay: 2,
+                  duration: 0.75,
+                }}
+              >
                 <h2>Backend : </h2>
-              </MotionEffect>
+              </motion.div>
               <ul className="logo-list">
                 <LogoList logo={logoNode} name="Nodejs" delay={2.2} />
                 <LogoList logo={logoExpress} name="Express" delay={2.3} />
                 <LogoList logo={logoStrapi} name="Strapi" delay={2.4} />
                 <LogoList logo={logoSql} name="SQL" delay={2.5} />
               </ul>
-              <MotionEffect delay={2.6}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  ease: "easeOut",
+                  delay: 2.4,
+                  duration: 0.75,
+                }}
+              >
                 <h2>Graphisme : </h2>
-              </MotionEffect>
+              </motion.div>
               <ul className="logo-list">
                 <LogoList logo={logoPhotoshop} name="Photoshop" delay={2.7} />
                 <LogoList logo={logoAdobexd} name="Adobe XD" delay={2.8} />

@@ -3,9 +3,9 @@ import LogoTitle from "../../assets/images/logo-c.png";
 import imgProfil from "../../assets/images/img-profil.png";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
-import AnimatedLetters from "../AnimatedLetters";
-import TransitionEffect from "../TransitionEffect";
-import CardHoverEffect from "../CardHoverEffect";
+import AnimatedLetters from "../../components/AnimatedLetters";
+import TransitionEffect from "../../components/TransitionEffect";
+import CardHoverEffect from "../../components/CardHoverEffect";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -32,7 +32,7 @@ const Home = () => {
         <div className="container home-page">
           <CardHoverEffect shape={shapePolygon}>
             <div className="image-zone">
-              <img src={imgProfil} alt="profil"></img>
+              <img src={imgProfil} alt="profil" loading="lazy"></img>
             </div>
             <div className="text-zone">
               <h1>

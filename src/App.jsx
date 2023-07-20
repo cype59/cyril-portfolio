@@ -2,12 +2,13 @@ import React from "react";
 import "./App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
-import About from "./components/About";
+import Home from "./pages/Home";
+import About from "./pages/About";
 import { AnimatePresence } from "framer-motion";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
+import Contact from "./pages/Contact";
+import Skills from "./pages/Skills";
+import Portfolio from "./pages/Portfolio";
+import Followmytrip from "./pages/PortfolioPages/Followmytrip";
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="competences" element={<Skills />} />
           <Route path="portfolio" element={<Portfolio />} />
+          <Route path="followmytrip" element={<Followmytrip />} />
         </Route>
       </Routes>
     </AnimatePresence>

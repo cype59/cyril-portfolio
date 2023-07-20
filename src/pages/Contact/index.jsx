@@ -1,15 +1,15 @@
-import AnimatedLetters from "../AnimatedLetters";
-import TransitionEffect from "../TransitionEffect";
+import AnimatedLetters from "../../components/AnimatedLetters";
+import TransitionEffect from "../../components/TransitionEffect";
 import { motion } from "framer-motion";
 import "./index.scss";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import CardHoverEffect from "../CardHoverEffect";
+import CardHoverEffect from "../../components/CardHoverEffect";
 import shapeCircle from "../../assets/images/shape-circle.png";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import MotionEffect from "../MotionEffect";
+import MotionEffect from "../../components/MotionEffect";
 
 const Contact = () => {
   const refForm = useRef();

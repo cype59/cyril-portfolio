@@ -3,7 +3,6 @@ import "./index.scss";
 
 const CardHoverEffect = (props) => {
   const hoverHandler = (e) => {
-    console.log(window.innerWidth);
     if (document.querySelector(".hover-effect")) {
       let hoverElement = document.querySelector(".hover-effect");
       if (window.innerWidth > 830) {
