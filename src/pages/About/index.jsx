@@ -1,15 +1,6 @@
-import React, { createRef } from "react";
+import React, { useRef } from "react";
 import "./index.scss";
 import AnimatedLetters from "../../components/AnimatedLetters";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faAngular,
-//   faCss3,
-//   faGitAlt,
-//   faHtml5,
-//   faJsSquare,
-//   faReact,
-// } from "@fortawesome/free-brands-svg-icons";
 import TransitionEffect from "../../components/TransitionEffect";
 import CardHoverEffect from "../../components/CardHoverEffect";
 import shapeTriangle from "../../assets/images/shape-triangle.png";
@@ -18,7 +9,7 @@ import lottieFile from "../../assets/lotties/surf.json";
 import MotionEffect from "../../components/MotionEffect";
 
 const About = () => {
-  const refLottie = createRef();
+  const refLottie = useRef(null);
 
   return (
     <>
@@ -62,30 +53,6 @@ const About = () => {
             <div className="lottie-zone">
               <Player ref={refLottie} autoplay loop src={lottieFile}></Player>
             </div>
-
-            {/* 
-            <div className="stage-cube-cont">
-              <div className="cubespinner">
-                <div className="face1">
-                  <FontAwesomeIcon icon={faAngular} color="#DD0031" />
-                </div>
-                <div className="face2">
-                  <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-                </div>
-                <div className="face3">
-                  <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-                </div>
-                <div className="face4">
-                  <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-                </div>
-                <div className="face5">
-                  <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-                </div>
-                <div className="face6">
-                  <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-                </div>
-              </div>
-            </div> */}
           </CardHoverEffect>
         </div>
       </TransitionEffect>

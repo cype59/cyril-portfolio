@@ -23,8 +23,10 @@ const Home = () => {
       setLetterClass("text-animate-bouncy");
     }, 4000);
 
-    return () => clearTimeout(idTimeOut);
-  }, []);
+    return function cleanup() {
+      clearTimeout(idTimeOut);
+    };
+  }, [setLetterClass]);
 
   return (
     <>
@@ -47,7 +49,7 @@ const Home = () => {
                   str={word2}
                   index={word1.length}
                 />
-                <img src={LogoTitle} alt="developer" />
+                <img src={LogoTitle} alt="developer" loading="lazy"/>
                 <AnimatedLetters
                   letterClass={letterClass}
                   str={word3}
